@@ -80,7 +80,7 @@ publishing{
         register<MavenPublication>("release") {
             groupId = "com.subham008"
             artifactId = "extensioniconpack"
-            version = "1.0.1"
+            version = "2.0.0"
 
             afterEvaluate {
                 from(components["release"])
