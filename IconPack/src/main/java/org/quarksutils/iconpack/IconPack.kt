@@ -1,8 +1,8 @@
-package org.quarksutils.extensioniconpack
+package org.quarksutils.iconpack
 
 import androidx.annotation.DrawableRes
 
-enum class ExtensionIcon (val label: String) {
+public enum class ExtensionIcon (val label: String) {
     HTML("HTML"),
     JAVASCRIPT("JavaScript"),
     CSS("CSS"),
@@ -19,11 +19,10 @@ enum class ExtensionIcon (val label: String) {
     ZIP("Zip"),
     JSON("JSON"),
     YAML("YAML"),
-
 }
 
 @DrawableRes
-fun getIcon(extensionIcon: ExtensionIcon) :  Int {
+public fun getIcon(extensionIcon: ExtensionIcon) :  Int {
     return when (extensionIcon) {
         ExtensionIcon.HTML -> R.drawable.html
         ExtensionIcon.JAVASCRIPT -> R.drawable.javascript
@@ -43,5 +42,3 @@ fun getIcon(extensionIcon: ExtensionIcon) :  Int {
         ExtensionIcon.YAML -> R.drawable.yaml
     }
 }
-
-

@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ExtensionIconPack"
 include(":app")
- 
+include(":IconPack")
