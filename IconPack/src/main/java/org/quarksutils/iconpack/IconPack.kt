@@ -3,6 +3,7 @@ package org.quarksutils.iconpack
 import androidx.annotation.DrawableRes
 
  enum class ExtensionIcon (val label: String) {
+    FILE("file") ,
     HTML("html"),
     JAVASCRIPT("js"),
     CSS("css"),
@@ -19,11 +20,14 @@ import androidx.annotation.DrawableRes
     ZIP("zip"),
     JSON("json"),
     YAML("yaml"),
+    GO("go"),
+    EXE("exe")
 }
 
 @DrawableRes
  fun getIcon(extensionIcon: ExtensionIcon) :  Int {
     return when (extensionIcon) {
+        ExtensionIcon.FILE -> R.drawable.file
         ExtensionIcon.HTML -> R.drawable.html
         ExtensionIcon.JAVASCRIPT -> R.drawable.javascript
         ExtensionIcon.CSS -> R.drawable.css
@@ -40,6 +44,8 @@ import androidx.annotation.DrawableRes
         ExtensionIcon.ZIP -> R.drawable.zip
         ExtensionIcon.JSON -> R.drawable.json
         ExtensionIcon.YAML -> R.drawable.yaml
+        ExtensionIcon.GO ->R.drawable.go_logo_blue
+        ExtensionIcon.EXE -> R.drawable.exe_file_icon
     }
 }
 
@@ -66,6 +72,8 @@ fun getIcon(filename:String):Int{
         "zip" -> ExtensionIcon.ZIP
         "json" -> ExtensionIcon.JSON
         "yaml", "yml" -> ExtensionIcon.YAML // Handle both .yaml and .yml
+        "go" -> ExtensionIcon.GO
+        "exe" -> ExtensionIcon.EXE
         else -> null // Unknown extension
     }
 

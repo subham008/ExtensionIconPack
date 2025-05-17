@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     id("maven-publish")
+    id("signing")
 }
 
 
@@ -14,7 +15,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 30
+        minSdk = 28
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
         aarMetadata {
@@ -80,13 +81,12 @@ publishing{
         register<MavenPublication>("release") {
             groupId = "com.subham008"
             artifactId = "extensioniconpack"
-            version = "2.0.0"
+            version = "2.1.2"
 
             afterEvaluate {
                 from(components["release"])
             }
         }
     }
-
 
 }
